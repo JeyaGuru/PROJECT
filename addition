@@ -1,0 +1,34 @@
+package e.guru.addition;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+    
+    public void sum(View v)
+    {
+        //get the edit text
+        EditText t1=(EditText)findViewById(R.id.editText2);
+        EditText t2=(EditText)findViewById(R.id.editText3);
+
+        //convert value into int
+        int x=Integer.parseInt(t1.getText().toString());
+        int y=Integer.parseInt(t2.getText().toString());
+
+        //sum these two numbers
+        int z=x+y;
+
+        //display this text to TextView
+        TextView data=(TextView)findViewById(R.id.textView4);
+        data.setText("The sum is "+z);
+
+    }
+}
